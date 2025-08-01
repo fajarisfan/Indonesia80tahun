@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Indonesia 80 Tahun: Harapan atau Hancur?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ff0000, #ffffff);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+        }
+        .container {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            max-width: 750px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        h1 {
+            color: #d11d2e;
+            font-size: 2.3em;
+            margin-bottom: 10px;
+        }
+        .date {
+            font-style: italic;
+            color: #777;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            text-align: justify;
+        }
+        .btn {
+            background-color: #d11d2e;
+            color: white;
+            padding: 10px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #a0101e;
+            transform: scale(1.05);
+        }
+        #output {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 5px solid #d11d2e;
+            border-radius: 8px;
+            text-align: left;
+            display: none;
+        }
+        .footer-text {
+            margin-top: 20px;
+            font-weight: bold;
+            color: #d11d2e;
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="background-music" src="Indonesia_pusaka.mp3" autoplay loop></audio>
+
+    <div class="container">
+        <h1>Indonesia 80 Tahun: Harapan atau Hancur?</h1>
+        <p class="date">17 Agustus 2025</p>
+
+        <p>Hari ini bukan hanya soal perayaan. Ini tentang menyuarakan hati yang tertahan. Kita ingin Indonesia yang tidak dibelah oleh sebutan “anak siapa”, “buzzer siapa”, atau saling rendahkan antar sesama. 80 tahun kemerdekaan seharusnya menyatukan — bukan memecah. Ini harapan kami. Harapanmu juga.</p>
+
+        <div>
+            <button class="btn" onclick="showHope(0)">Harapan 1</button>
+            <button class="btn" onclick="showHope(1)">Harapan 2</button>
+            <button class="btn" onclick="showHope(2)">Harapan 3</button>
+            <button class="btn" onclick="showHope(3)">Harapan 4</button>
+            <button class="btn" onclick="showHope(4)">Harapan 5</button>
+            <button class="btn" onclick="showHope(5)">Terakhir: Merdeka atau Bubar?</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        const hopes = [
+            "🇮🇩 Harapan pertama: Semoga bangsa ini tidak lagi dibelah oleh kepentingan kekuasaan. Tak ada lagi kata 'cebong' atau 'kampret'. Kita semua Indonesia.",
+            "🕊️ Harapan kedua: Semoga rakyat tak lagi dibodohi dengan pencitraan. Pemimpin seharusnya hadir, bukan disembah atau di-branding macam raja.",
+            "💔 Harapan ketiga: Cukup sudah saling hina karena pilihan politik. Hentikan warisan kebencian. Kita terlalu lama dijadikan alat.",
+            "🌱 Harapan keempat: Semoga anak muda bangkit, tidak jadi budak algoritma, tapi jadi pelopor persatuan. Bangsa ini butuh harapan, bukan noise.",
+            "🔊 Harapan kelima: Tak ada lagi buzzer bayaran. Tak ada lagi pengkhianat nurani yang menjual kata demi kekuasaan.",
+            "🔥 Ini pilihan kita: MERDEKA — berdiri di atas kaki sendiri, bersatu tanpa label, atau BUBAR — jika terus dibiarkan hancur oleh elit yang lupa akar."
+        ];
+
+        function showHope(index) {
+            const output = document.getElementById('output');
+            output.style.display = 'block';
+            output.innerHTML = `<strong>${hopes[index]}</strong>`;
+        }
+    </script>
+
+</body>
+</html>
