@@ -82,6 +82,9 @@
 
         <p>Hari ini bukan hanya soal perayaan. Ini tentang menyuarakan hati yang tertahan. Kita ingin Indonesia yang tidak dibelah oleh sebutan “anak siapa”, “buzzer siapa”, atau saling rendahkan antar sesama. 80 tahun kemerdekaan seharusnya menyatukan — bukan memecah. Ini harapan kami. Harapanmu juga.</p>
 
+        <!-- ✅ Tombol play manual -->
+        <button class="btn" onclick="document.getElementById('background-music').play()">▶️ Mainkan Lagu</button>
+
         <div>
             <button class="btn" onclick="showHope(0)">Harapan 1</button>
             <button class="btn" onclick="showHope(1)">Harapan 2</button>
@@ -108,6 +111,12 @@
             const output = document.getElementById('output');
             output.style.display = 'block';
             output.innerHTML = `<strong>${hopes[index]}</strong>`;
+
+            // Mainkan lagu saat klik harapan
+            const audio = document.getElementById('background-music');
+            if (audio.paused) {
+                audio.play().catch(e => console.log("Autoplay gagal:", e));
+            }
         }
     </script>
 
